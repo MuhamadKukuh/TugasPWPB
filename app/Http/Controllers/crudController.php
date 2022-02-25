@@ -10,9 +10,15 @@ use Illuminate\Support\Facades\DB;
 class crudController extends Controller
 {
     public function index(){
+
+        $kelas = siswa::join('kelas', 'siswas.id_kelas', '=', 'kelas.id')->where('siswas.id_kelas', 1)->get();
+        // @dd($kelas);
+
+
         return view('index', [
             "kelas" => siswa::all(),
-            "no"    => 1
+            "no"    => 1,
+            "coba"  => $kelas
         ]);
     }
 

@@ -1,3 +1,5 @@
+@extends('template.main')
+@section('content')
 <form action="{{ url('/update/'. $data->id) }}" method="post" enctype="multipart/form-data">
     @csrf
     {{-- @csrf --}}
@@ -14,3 +16,4 @@
     
     <button>Kirim</button>
 </form>
+@endsection
