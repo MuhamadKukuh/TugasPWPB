@@ -15,5 +15,5 @@ class siswa extends Model
         return $this->belongsTo(kelas::class, 'id_kelas');
     }
 
-
+    
 }

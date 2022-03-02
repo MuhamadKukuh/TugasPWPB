@@ -20,7 +20,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::post('/update/{id}', [crudController::class, 'update']);
+Route::put('/update/{id}', [crudController::class, 'update']);
 Route::post('/insert', [crudController::class, 'insert']);
 Route::get('/home', [crudController::class, 'index'])->name('index');
 Route::get('/edit/{id}', [crudController::class, 'edit'])->name('apa');

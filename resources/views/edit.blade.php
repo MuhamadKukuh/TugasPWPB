@@ -2,6 +2,7 @@
 @section('content')
 <form action="{{ url('/update/'. $data->id) }}" method="post" enctype="multipart/form-data">
     @csrf
+    @method('put')
     {{-- @csrf --}}
     <input type="file" name="image">
     note: jika tidak ingin mengupdate foto tidak usah isi
